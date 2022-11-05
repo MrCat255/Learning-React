@@ -1,0 +1,36 @@
+.main {
+    width: 100%;
+    background: #E9E9E9;
+    padding-top: 51px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    row-gap: 40px;
+    box-sizing: border-box;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+.description {
+    display: grid;
+    row-gap: 16px;
+    grid-template-rows: min-content auto;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+}
+.description h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0;
+}
+.reviews {
+    display: grid;
+    row-gap: 16px;
+}

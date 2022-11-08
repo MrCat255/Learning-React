@@ -6,12 +6,11 @@ export const GenrePage = (props) => {
     const [activeGenre, setActiveGenre] = useState(props.genres[0]);
 
     return <main className={style.main}>
-        <div className={style.genres}>
-            <h3>Художественная литература</h3>
+        <ul className={style.genres}>
             {
-                props.genres.map((genre) => <div key={genre.id} onClick={() => setActiveGenre(genre)}>{genre.name}</div>)
+                props.genres.map((genre) => <li key={genre.id} onClick={() => setActiveGenre(genre)} className={`${genre.name !== activeGenre.name ? '' : style.focus}`}>{genre.name}</li>)
             }
-        </div>
+        </ul>
         <Books activeGenre={activeGenre}/>
     </main>
 }

@@ -1,8 +1,7 @@
 import style from './styles.module.css'
-import {useState} from "react";
+import {Counter} from "../Counter/Counter";
 
 export const Book = (props) => {
-    const [count, setCount] = useState(0);
 
     return <div className={style.book}>
         <div>
@@ -14,10 +13,6 @@ export const Book = (props) => {
             </div>
             <span className={style.price}>{props.book.price} &#8381;</span>
         </div>
-        <div>
-            <button onClick={() => setCount(count - 1)} disabled={count===0}>-</button>
-            <span>{count}</span>
-            <button onClick={() => setCount(count + 1)} disabled={count===6}>+</button>
-        </div>
+        <Counter/>
     </div>
 }

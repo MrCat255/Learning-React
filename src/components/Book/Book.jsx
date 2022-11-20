@@ -1,18 +1,32 @@
-import style from './styles.module.css'
-import {Counter} from "../Counter/Counter";
+import style from "./styles.module.css";
+import { Counter } from "../Counter/Counter";
+import { useSelector } from "react-redux";
+import { selectBookById } from "../../store/book/selectors";
+import { Link } from "react-router-dom";
 
 export const Book = (props) => {
+  const book = useSelector((state) => selectBookById(state, props.bookId));
 
-    return <div className={style.book}>
+  if (!book) {
+    return null;
+  }
+
+  const bookPath = `/book/${book.id}`;
+
+  return (
+    <div className={style.book}>
+      <div>
+        <Link to={bookPath}>
+          <h3>{book.name}</h3>
+        </Link>
         <div>
-            <h3>{props.book.name}</h3>
-            <div>
-                <span>{props.book.author}</span>
-                <span>{props.genre}</span>
-                <span>{props.book.rating}</span>
-            </div>
-            <span className={style.price}>{props.book.price} &#8381;</span>
+          <span>{book.author}</span>
+          <span>{props.genre}</span>
+          <span>{book.rating}</span>
         </div>
-        <Counter/>
+        <span className={style.price}>{book.price} &#8381;</span>
+      </div>
+      <Counter bookId={props.bookId} />
     </div>
-}
+  );
+};

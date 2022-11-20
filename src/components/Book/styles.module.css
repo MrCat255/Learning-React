@@ -8,6 +8,9 @@
     background: #FFFFFF;
     border-radius: 8px;
 }
+.book a {
+    text-decoration: none;
+}
 .book > div:first-child {
     display: grid;
     row-gap: 22px;

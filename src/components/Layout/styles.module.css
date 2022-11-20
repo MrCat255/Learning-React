@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.header span {
+.header a{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -18,4 +18,6 @@
     line-height: 27px;
     color: #FFFFFF;
     margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
 }

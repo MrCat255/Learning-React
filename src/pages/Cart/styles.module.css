@@ -7,8 +7,84 @@
     column-gap: 20px;
     box-sizing: border-box;
 }
-.main > div {
+.main > div:first-child{
     background-color: #FFFFFF;
     border-radius: 8px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 438px;
+    min-width: 300px;
+}
+.main > div:first-child > div:first-child h3 {
+    margin: 0 0 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+.main > div:first-child > div:first-child ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.main > div:first-child > div:first-child li {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 34px;
+}
+.price {
+    font-weight: 700;
+}
+.books {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.buying {
+    display: flex;
+    justify-content: space-between;
+}
+.buying > div:first-child {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+.buying > div:first-child span:last-child {
+    margin-left: 20px;
+}
+.buying button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 12px 8px;
+    gap: 8px;
+    width: 79px;
+    height: 34px;
+    background: #000000;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    border: none;
+    justify-content: center;
+    cursor: pointer;
 }
